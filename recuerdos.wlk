@@ -1,17 +1,23 @@
+import ciudades.*
 object recuerdoParis {
+    method ciudadCorrespondiente() = paris
     method formaActual() = llaveroTorreEiffel
 }
 object recuerdoBsAs {
     
+    method ciudadCorrespondiente() = buenosAires
     method formaActual() = mate 
     
 }
 object recuerdoBagdad {
-    var añoActual = 2026
+    
+    const formasPosibles = [jardinesDeBabilonia, barrilDePetroleo, armaDestruccionMasiva, muñecoTioSam]
 
+    method ciudadCorrespondiente() = bagdad
     method formaActual() {
-
+        return formasPosibles.find { forma => forma.añoCorrespondiente(bagdad.añoActual()) }
     }
+    
 
 }
 object recuerdoLasVegas {
@@ -41,14 +47,14 @@ object presidente {
 }
 //Objectos recuerdo de Bagdad
 object barrilDePetroleo {
-
+    method añoCorrespondiente(año) = año.between(1970, 2002)
 }
 object armaDestruccionMasiva {
-  
+    method añoCorrespondiente(año) = año == 2003 || año == 2004
 }
 object jardinesDeBabilonia {
-  
+    method añoCorrespondiente(año) = año < 1970 
 }
-object soldadoYankee {
-
+object muñecoTioSam {
+  method añoCorrespondiente(año) = año > 2004 
 }
