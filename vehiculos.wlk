@@ -19,7 +19,21 @@ object antiguallaBlindada {
 object superConvertible {
     var combustible = 300
     var velocidadMaxima = 200
+    var formaActual = artemis
+
+    method formaActual() = formaActual
     
     method combustible() = combustible
     method velocidadMaxima() = velocidadMaxima
+}
+//Objetos superConvertible
+
+object artemis {
+  
+}
+object autoDeportivo {
+  
+}
+object bicicleta {
+    
 }

@@ -1,13 +1,20 @@
+
+import recuerdos.*
 object luke {
-    
+
+    method recuerdoUltimoLugarVisitado() = casa.recuerdoDestacado().formaActual()
+    method cantidadLugaresVisitados() = casa.recuerdosTirados() + 1
 }
 object casa {
-    var recuedoDestacado = 0
+    var recuedoDestacado = recuerdoParis
+    var recuerdosTirados = 0
 
     method recuerdoDestacado() = recuedoDestacado
+    method recuerdosTirados() = recuerdosTirados
 
-    method cambiarRecuerdoDestacado(nuevoRecuerdo) {
-        recuedoDestacado = nuevoRecuerdo
+    method cambiarRecuerdoDestacado(ciudadVisitada) {
+        recuedoDestacado = ciudadVisitada.recuerdoComprado()
+        recuerdosTirados += 1
     }
 }
 
