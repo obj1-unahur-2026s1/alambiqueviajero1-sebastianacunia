@@ -1,7 +1,10 @@
+import elAlambiqueViajero.*
 import ciudades.*
 object recuerdoParis {
+
     method ciudadCorrespondiente() = paris
     method formaActual() = llaveroTorreEiffel
+
 }
 object recuerdoBsAs {
     
@@ -22,7 +25,8 @@ object recuerdoBagdad {
 }
 object recuerdoLasVegas {
 
-
+    method ciudadCorrespondiente() = lasVegas
+    method formaActual() = casa.recuerdoActual().formaActual()
   
 }
 // Objetos recuerdo París

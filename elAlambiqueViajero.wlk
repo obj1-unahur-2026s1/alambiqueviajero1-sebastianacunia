@@ -4,13 +4,13 @@ import vehiculos.*
 object luke {
     var vehiculoActual = alambiqueVeloz
 
-    method recuerdoUltimoLugarVisitado() = casa.recuerdoDestacado().formaActual()
+    method recuerdoUltimoLugarVisitado() = casa.recuerdoActual().formaActual()
     method cantidadLugaresVisitados() = casa.recuerdosTirados() + 1
     method vehiculoActual() = vehiculoActual
 
     method irseDeViaje(ciudad,vehiculo) {
         if (ciudad.puedoViajarEn(self.vehiculoActual())) {
-            casa.cambiarRecuerdoDestacado(ciudad)
+            casa.cambiarRecuerdo(ciudad)
         }
     }
     method cambiarVehiculo(vehiculo) {
@@ -18,14 +18,14 @@ object luke {
     }
 }
 object casa {
-    var recuedoDestacado = recuerdoParis
+    var recuerdoActual = recuerdoParis
     var recuerdosTirados = 0
 
-    method recuerdoDestacado() = recuedoDestacado
+    method recuerdoActual() = recuerdoActual
     method recuerdosTirados() = recuerdosTirados
 
-    method cambiarRecuerdoDestacado(ciudadVisitada) {
-        recuedoDestacado = ciudadVisitada.recuerdoComprado()
+    method cambiarRecuerdo(ciudadVisitada) {
+        recuerdoActual = ciudadVisitada.recuerdoComprado()
         recuerdosTirados += 1
     }
 }

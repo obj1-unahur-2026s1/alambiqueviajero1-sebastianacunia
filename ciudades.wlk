@@ -34,6 +34,6 @@ object lasVegas {
 
     method recuerdoComprado() = recuerdoLasVegas
     method combustibleNecesario() = 120
-    method recuerdoHomenajeado() = casa.recuerdoDestacado()
-    method puedoViajarEn(vehiculo) = self.recuerdoHomenajeado().ciudadCorrespondiente().puedoViajarEn(vehiculo)
+    method homenaje() = casa.recuerdoActual()
+    method puedoViajarEn(vehiculo) = self.homenaje().ciudadCorrespondiente().puedoViajarEn(vehiculo)
 }
